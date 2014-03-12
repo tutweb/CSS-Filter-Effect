@@ -1,0 +1,105 @@
+@import url(http://fonts.googleapis.com/css?family=PT+Serif);
+@import url(http://fonts.googleapis.com/css?family=Hammersmith+One);
+*{
+	padding: 0;
+	margin: 0;
+}
+a{
+	text-decoration: none;
+	color: #5B264E;
+}
+
+body{
+	overflow: hidden;
+	font-family: 'PT Serif', serif;
+}
+
+.my-table{
+	display: table;
+}
+
+.my-row{
+	display: table-row;
+}
+
+.my-cell{
+	display: table-cell;
+}
+
+.container{
+	width: 100%;
+	margin: 0 auto;
+}
+
+.my-cell{
+	width: 49%;
+	height: 100%;
+	vertical-align: top;
+}
+
+.column1{
+	position: relative;
+}
+	.column1 img{
+		width: 100%;
+		height: auto;
+	}
+
+	.desc{
+		position: absolute;
+		top: 50%;
+		left: 5%;
+	}
+	.desc h1{
+		color: #fff;
+		font-family: 'Hammersmith One', sans-serif;
+		font-size: 20px;
+	}
+	.desc a{
+		color: #ddd;
+	}
+
+.column2{
+	padding: 40px;
+}
+.column2 p{
+	margin: 20px 0;
+}
+.column2 ul{
+	margin-left: 15px;
+}
+.column2 ul li{
+	border-bottom: 1px solid #ddd;
+	padding: 5px 0;
+}
+
+
+/* Animation */
+@-webkit-keyframes pulse  {
+  	0% { -webkit-filter: contrast(400%) grayscale(0%); }
+	  100% { -webkit-filter: contrast(100%) grayscale(100%); }
+	}
+@-webkit-keyframes mover	{
+	  0% { -webkit-transform: rotate(0deg); }
+	  100% { -webkit-transform: rotate(360deg); }
+	}
+
+.column1{
+
+	/* -webkit-filter: */
+	/* contrast(200%) */
+	/* brightness(25%) */
+	/* invert(100%) */
+	/* hue-rotate(110deg) */
+	/* grayscale(100%) */
+	/* sepia(100%) */
+	/* blur(10px); */
+
+	/* Bisa dipilih efek-efek diatas */
+
+	/* -webkit-transition: -webkit-filter 1s; */
+	-webkit-animation:  pulse 3s alternate infinite
+		/*mover 5s alternate infinite*/;
+
+}
+.column1:hover	{ -webkit-filter: contrast(300%) hue-rotate(80deg) grayscale(100%) /* blur(2px) */; }
